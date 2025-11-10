@@ -1,0 +1,36 @@
+# 1. Les redirections
+
+## 1.1. Redirection de la sortie : > et >>
+
+Exercice 1 (redirection >)
+1. Taper la commande ps dans un terminal. Consulter le manuel de la commande pour décrire ce qu’elle fait.
+ps : sert à afficher la liste des processus en cours d’exécution
+
+2. Taper maintenant ps > mon_fichier. Un fichier mon_fichier est créé dans le répertoire courant. Que contient-il?
+Il contient le resultat de la fonction ps
+
+3. Taper ensuite date > mon_fichier et regarder à nouveau le contenu du fichier.
+Le fichier contient le jour, la date , l'heure, et le fuseau horraire du pc lors de l'execution de la ligne de commande.
+
+4. Conclure sur le rôle du symbole >, en particulier dans le cas où le fichier qui figure après existe déjà.
+> : ecrase le texte et réécris si le fichier existe déjà et sinon le crée et écris
+
+Exercice 2 (redirection >>)
+1. Taper la commande who dans un terminal. Consulter le manuel de la commande pour décrire ce qu’elle fait.
+Renvoie la liste d'utilisateur connecté
+
+2. Taper maintenant who >> mon_fichier, où le fichier en question est celui provenant de l’exercice précédent. Regarder à nouveau le contenu du fichier.
+
+3. Conclure sur le rôle du symbole >>.
+Redirige et ajoute
+
+1.2. Redirection de l’entrée : <
+
+Exercice 3 (commande cat)
+La commande cat prend ce qui lui arrive dans le flux d’entrée et le réécrit en sortie.
+
+1. Lancer cat sans argument. L’invite change de forme pour vous permettre de fournir des données. Taper quelques caractères puis appuyer sur la touche Entrée. Observer le résultat.
+Sur la sortie affiche l'entrée
+
+2. Taper encore quelques lignes, puis pour indiquer au processus la fin des données à traiter, appuyer sur la combinaison de touches Ctrl-D (aussi appelé EOF, ou end of file). Que se passe-t-il?
+Tant que tu ecris 
