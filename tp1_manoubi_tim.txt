@@ -1,0 +1,135 @@
+TP1 : R4.VCOD.10 – Renforcement informatique
+
+────────────────────────────────────────────
+Page 3 – Opening a terminal
+────────────────────────────────────────────
+
+01. Que désignent les mots anglais suivants : terminal, console, prompt, shell, bash ?
+• Terminal : interface permettant à l'utilisateur de communiquer avec le système via des commandes textuelles.  
+• Console : (équivalent du terminal physique ou logiciel, permet aussi de saisir des commandes).  
+• Prompt : invite de commande affichée pour indiquer que le système est prêt à recevoir une commande.  
+• Shell : interface en ligne de commande permettant d’interagir avec le système (interpréteur de commandes).  
+• Bash : “Bourne Again SHell”, interpréteur de commandes standard sous Linux (héritier du shell Unix Bourne).
+
+02. Que fait la commande pwd ? De quoi est-elle l’abréviation ?
+Affiche le chemin absolu du répertoire où l’on se trouve.  
+→ pwd = Print Working Directory.
+
+03. Que fait la commande man pwd ? Quelle est la touche pour quitter ?
+Affiche la documentation de la commande `pwd`.  
+→ Touche pour quitter : `q`.
+
+04. Que désigne un « / » dans la ligne de commande ? (Deux réponses)
+• Séparateur entre les répertoires dans un chemin.  
+• Répertoire racine (root directory) du système Linux.
+
+05. Quels sont les deux sens du mot anglais “root” dans le contexte Linux ?
+• “root” = répertoire racine du système de fichiers.  
+• “root” = utilisateur administrateur avec tous les privilèges.
+
+06. Que fait la commande cd ? De quoi est-elle l’abréviation ?
+Change le répertoire courant.  
+→ cd = Change Directory.
+
+07. Quelle est la commande pour remonter d’un répertoire ? Et de plusieurs ?
+• `cd ..` → remonte d’un dossier.  
+• `cd ../../..` → remonte de plusieurs niveaux.
+
+08. Qu’appelle-t-on “chemin relatif” et “chemin absolu” ?
+• Chemin absolu : commence à partir de la racine `/`.  
+• Chemin relatif : part du répertoire courant.
+
+09. Que fait la commande cd ~ ? cd ? cd . ? cd - ?
+• `cd ~` ou `cd` : va dans le dossier personnel (/home/USERNAME).  
+• `cd .` : reste dans le répertoire actuel.  
+• `cd -` : retourne au répertoire précédent.
+
+10. Que fait la commande whoami ?  
+Affiche le nom de l’utilisateur actuel.
+
+
+────────────────────────────────────────────
+Page 4 – Creating folders and files
+────────────────────────────────────────────
+
+01. Quelle est la commande pour créer un répertoire ? De quoi est-elle l’abréviation ?
+`mkdir` → make directory.
+
+02. Différence entre mkdir test, mkdir /test, mkdir ~/test et mkdir ./test ?
+• `mkdir test` : crée dans le dossier courant.  
+• `mkdir /test` : crée à la racine.  
+• `mkdir ~/test` : crée dans le dossier personnel.  
+• `mkdir ./test` : crée dans le dossier courant (identique à `mkdir test`).
+
+03. Quelle commande pour lister le contenu d’un répertoire ?  
+`ls` = list.
+
+04. Comment passe-t-on une option à une commande ?  
+Avec un tiret : `-option` (ex : `ls -l`).
+
+05. À quoi sert l’option -p de mkdir ?  
+Crée toute une arborescence (les sous-dossiers manquants).
+
+06. À quoi sert l’option -l de ls ?  
+Affiche les détails de chaque fichier (droits, taille, date, propriétaire...).
+
+07. Que fait la commande ls -arth ?
+• `-a` : affiche les fichiers cachés.  
+• `-r` : tri inversé (du plus ancien au plus récent).  
+• `-t` : tri par date de modification.  
+• `-h` : tailles lisibles (Ko, Mo...).
+
+08. Comment créer un répertoire avec des espaces dans le nom ?
+• `mkdir "nom dossier"`  
+• ou `mkdir nom\ dossier`
+
+09. À quoi sert le caractère `>` ?
+Redirige la sortie d’une commande vers un fichier (écrase le contenu existant).
+
+10. Quelle commande pour afficher le contenu d’un fichier ?  
+`cat fichier.txt` → “concatenate”.
+
+11. À quoi servent les options -n et -A de cat ?
+• `-n` : numérote les lignes.  
+• `-A` : affiche aussi les caractères invisibles.  
+→ Utile pour repérer des espaces, tabulations, ou retours Windows (^M).
+
+12. À quoi sert le caractère `*` ?
+C’est un caractère générique (joker) qui remplace n’importe quelle suite de caractères.
+
+13. Que font les touches Haut, Bas et Tabulation ?
+• Flèche Haut/Bas : rappeler les commandes précédentes.  
+• Tabulation : complète automatiquement fichiers, dossiers ou commandes.
+
+14. Différence entre `>` et `>>` ?
+• `>` : redirige et écrase le fichier.  
+• `>>` : redirige et ajoute à la fin.
+
+15. À quoi servent les commandes more et less ?
+• `more` : affiche le contenu page par page (lecture vers l’avant).  
+• `less` : affiche page par page avec navigation libre (haut/bas, recherche, retour arrière).  
+→ Préférer `less` (plus complet et rapide).
+
+
+────────────────────────────────────────────
+Page 5 – Moving and manipulating files
+────────────────────────────────────────────
+
+01. Expliquer le rôle des commandes mv, cp, rm et rmdir.
+• `mv` : déplacer ou renommer un fichier.  
+• `cp` : copier un fichier.  
+• `rm` : supprimer un fichier.  
+• `rmdir` : supprimer un dossier vide.
+
+02. Quels dangers peuvent se présenter ?
+• Risque d’écrasement de fichiers sans avertissement.  
+• Suppression définitive (pas de corbeille).  
+• Mauvaise utilisation des jokers (*) ou chemins.
+
+03. À quoi servent les options -i et -f ?
+• `-i` : demande une confirmation avant d’écraser ou de supprimer.  
+• `-f` : force l’exécution sans confirmation (dangereux).
+
+04. Que permet la commande alias rm='rm -i' ? Et la commande type rm ?
+• `alias rm='rm -i'` : crée un alias pour que `rm` demande toujours une confirmation.  
+• `type rm` : indique la nature de la commande (`alias`, `builtin`, ou chemin du programme).
